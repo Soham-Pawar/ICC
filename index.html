@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ICC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Tilt+Neon&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Rubik+Doodle+Shadow&family=Tilt+Neon&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Rubik+Doodle+Shadow&family=Space+Grotesk&family=Tilt+Neon&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Caveat&family=Rubik+Doodle+Shadow&family=Space+Grotesk&family=Tilt+Neon&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Rowdies:wght@300&family=Rubik+Doodle+Shadow&family=Space+Grotesk&family=Tilt+Neon&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      background-color: #5fb0e7;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 99%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+      z-index: 1000;
+      margin-left: -10px;
+      border-radius: 7px;
+      margin-top: 5px;
+      font-family: Space Grotesk;
+      font-weight: bolder;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    /* Style for the navbar links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+      border-bottom: 2px solid transparent;
+      letter-spacing: 1px;
+    }
+
+    .navbar a:hover {
+      background-color: #2980b9;
+      color: #fff;
+      border-bottom: 2px solid #ecf0f1;
+    }
+
+    /* Add a responsive design - decrease font size on small screens */
+    @media screen and (max-width: 600px) {
+      .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 50px;
+      text-align: center;
+    }   
+
+    .Section1 {
+        background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)), url('ICC.png');
+        background-position: right;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 620px;
+        width: auto;
+    }
+
+    .animated-img1:hover {
+        opacity: 0.7;
+    }
+
+    .animated-img2:hover {
+        opacity: 0.7;
+    }
+
+    /* Add more styles and animations as needed */
+    /*Section 2 */
+    #section2 {
+        background-color: #eeecec;
+    }
+    .flashcard {
+      position: relative;
+      width: 200px;
+      height: 300px;
+      margin: 20px;
+      overflow: hidden;
+      background-color: #57b0ec;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in;
+      border-radius: 13px;
+
+    }
+
+    .flashcard:hover {
+      transform: translateY(-30px);
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 7px;
+    }
+
+    #div1 {
+        margin-left: 200px;
+        box-shadow: 10px 10px 20px rgba(30, 149, 252, 2);
+    }
+
+    #div2 {
+        margin-top: -320px;
+        margin-left: 550px;
+        box-shadow: 10px 10px 20px rgba(30, 149, 252, 2);
+    }
+
+    #div3 {
+        margin-top: -320px;
+        margin-left: 900px;
+        box-shadow: 10px 10px 20px rgba(30, 149, 252, 2);
+    }
+
+    .defined {
+        margin-top: 50px;
+    }
+
+    .defined2 {
+        margin-top: -10px;
+    }
+
+    /* Section3 */
+    .card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 223, 0, 0.5), rgba(255, 223, 0, 0.5)); /* Golden color with 50% opacity */
+  filter: blur(10px); /* Added blur effect */
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff; /* Text color on top of the image */
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.card:hover .card-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card h2,
+.card p {
+  margin: 0;
+  font-size: 1.5em;
+  padding: 10px; /* Add some padding to the text */
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #e7b75f; /* Golden color */
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-weight: bolder;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background-color: #e2c38b;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#Trophy1 {
+  margin-left: 300px;
+}
+
+#Trophy2 {
+  margin-top: -300px;
+  margin-left: 600px;
+}
+
+#Trophy3 {
+  margin-top: -300px;
+  margin-left: 900px;
+}
+
+
+    .defined3 {
+      margin-top: 50px; 
+    }
+    
+
+  </style>
+  <script>
+    function change() {
+        window.open('https://www.icc-cricket.com/', '_blank');
+    }
+
+    function change1() {
+        window.open('https://www.bcci.tv/', '_blank');
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const links = document.querySelectorAll('a');
+
+      links.forEach(link => {
+        link.addEventListener('click', smoothScroll);
+      });
+
+      function smoothScroll(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        window.scrollTo({
+          top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
+          behavior: 'smooth'
+        });
+      }
+    });
+
+    function playClickSound() {
+      var audio = new Audio('click.mp3');
+      audio.play();
+    }
+
+    
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="navbar">
+            <a href="#" class="anchor">🏏</a>
+            <a href="#home">Home</a>
+            <a href="#section2">Cabinet</a>
+            <a href="#section3">Tournaments</a>
+            <a href="#section4">Points Table</a>
+            <a href="#section5">Arcade</a>
+            <a href="#section6">Merch</a>
+            <a href="#section7">Contact</a>
+          </div>
+    </nav>
+  </header>
+
+  <section class="Section1" id="home">
+    <div class="container">
+        <h2 style="font-family: Rubik Doodle Shadow; color: aliceblue; font-size: 50px; letter-spacing: 8px;">INTERNATIONAL CR<span style="color: red;">i</span>CKET COUNCIL</h2>
+        <img style="border-radius: 15px;" class="animated-img1" src="ICC 1.png" onclick="change()"/>
+        <img style="border-radius: 15px; height: 225px; width: 270px; margin-left: 20px;" class="animated-img2" src="ICC 2.png" onclick="change1()"/>
+        <p style="font-family: Cairo; font-weight: bolder; line-height: 23px; color: rgb(115, 200, 240); margin-top: 50px;">Hey, fellow cricket enthusiasts! Welcome to the ICC website created by Soham from IX-B.<br>
+            Here, you'll find all the cricket buzz without the extra fluff. Dive into our Budget section to discover how the cricket world manages its funds.<br>
+            Check out Tournaments for the scoop on upcoming matches and epic showdowns.<br>
+            Curious about your favorite team or player's standing? We've got you covered with our Team and Player Rankings. <br>
+            And, of course, don't forget to explore our Merch section for the coolest cricket gear. Feeling playful?<br>
+            Engage in some small games to test your cricket knowledge and skills.<br>
+            So, stay tuned, because here at ICC, the game is more than just a sport—it's a passion! Let's celebrate the spirit of cricket together!</p>
+    </div>
+  </section>
+
+  <section id="section2">
+    <h2>Cabinet</h2>
+    <div class="defined">
+    <div id="div1" class="flashcard">
+        <div class="content">
+          <h3>Chairman ICC</h3>
+          <p>Mst. Soham</p>
+          <img src="ICC 1.png" alt="Image">
+        </div>
+      </div>
+
+      <div id="div2" class="flashcard">
+        <div class="content">
+          <h3>President BCCI</h3>
+          <p>Mst. Shaunak</p>
+          <img src="ICC 2.png" style="height: 160px;" alt="Image">
+        </div>
+      </div>
+
+      <div id="div3" class="flashcard">
+        <div class="content">
+          <h3>CEO BCCI</h3>
+          <p>Mst. Kkrish</p>
+          <img src="ICC 2.png" style="height: 160px;" alt="Image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#eeecec" fill-opacity="1" d="M0,32L48,64C96,96,192,160,288,176C384,192,480,160,576,133.3C672,107,768,85,864,106.7C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+  </svg>
+
+  <section id="section3">
+    <div class="defined2">
+        <h2>-- Tournaments --</h2>
+        <div id="Trophy1" class="card">
+          <img src="BPL.png" alt="Card Image">
+          <div class="card-content">
+            <h2 style="color: #000; font-family: Rubik Doodle Shadow; background-color: #bfdbf5;">BPL</h2>
+            <p style="color: #000; font-family: Space Grotesk;">Bharat Premier League</p>
+            <button class="button" onclick="playClickSound()">Click To view Winners</button>
+          </div>
+        </div>
+
+        <div id="Trophy2" class="card">
+          <img src="CWC.png" alt="Card Image">
+          <div class="card-content">
+            <h2 style="color: #000; font-family: Rubik Doodle Shadow; background-color: #bfdbf5;"">CWC</h2>
+            <p style="color: #000; font-family: Space Grotesk;">Cricket World Cup</p>
+            <button class="button" onclick="playClickSound()">Click To view Winners</button>
+          </div>
+        </div>
+
+        <div id="Trophy3" class="card">
+          <img src="AC.png" alt="Card Image">
+          <div class="card-content">
+            <h2 style="color: #000; font-family: Rubik Doodle Shadow; background-color: #bfdbf5;"">Asia Cup</h2>
+            <p style="color: #000; font-family: Space Grotesk;">Mens Odi Asia Cup</p>
+            <button class="button" onclick="playClickSound()">Click To view Winners</button>
+          </div>
+        </div>
+
+    </div>
+          
+    </div>
+  </section>
+
+  <section id="section4">
+    <h2>Section 4</h2>
+    <p>Your content goes here.</p>
+  </section>
+
+  <section id="section5">
+    <h2>Section 5</h2>
+    <p>Your content goes here.</p>
+  </section>
+
+  <section id="section6">
+    <h2>Section 6</h2>
+    <p>Your content goes here.</p>
+  </section>
+
+  <section id="section7">
+    <h2>Section 7</h2>
+    <p>Your content goes here.</p>
+  </section>
+</body>
+</html>
